@@ -1,0 +1,38 @@
+[
+  {
+    "model": "auth.user",
+    "pk": 1,
+    "fields": {
+      "password": "pbkdf2_sha256$216000$84ccRVhYWnIA$yeNUFbCojrkWB31kZubPWCm5dH0ZWNNXgwNYbz1vRSY=",
+      "last_login": "2021-09-20T13:32:20.868Z",
+      "is_superuser": true,
+      "username": "sa",
+      "first_name": "",
+      "last_name": "",
+      "email": "aa@aa.aa",
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2021-05-06T15:43:03.317Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 2,
+    "fields": {
+      "password": "pbkdf2_sha256$216000$NrVZKzIftp3b$i/7+nLSzh/EURXekLlJPR2YN4Fwv2kApyKy04gvbpIE=",
+      "last_login": "2021-09-20T13:32:28.420Z",
+      "is_superuser": false,
+      "username": "content.manager@92newshd.tv",
+      "first_name": "CM",
+      "last_name": "",
+      "email": "",
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2021-09-20T13:21:35Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  }
+]

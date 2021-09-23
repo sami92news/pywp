@@ -1,0 +1,27 @@
+#changelist .results{
+    height: calc(100vh - 352px);
+    min-height: 200px;
+    overflow: auto;
+}
+a, button{
+    cursor: pointer;
+}
+.action-icons-container>a{
+    padding: 5px;
+    cursor: pointer;
+}
+#container > .main{
+    width:calc(100% - 10px);
+}
+#changelist.module{
+    margin-bottom:0;
+}
+#content{
+    padding: 10px;
+}
+#footer {
+    display: none;
+}
+#nav-sidebar.sticky{
+    max-height: calc(100vh - 85px);
+}

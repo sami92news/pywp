@@ -1,0 +1,17 @@
+{
+    "active_db": "mysql",
+    "env": "dev",
+    "local" : 1,
+    "postgresql": {
+        "ENGINE": "django.db.backends.postgresql",
+        "NAME": "",
+        "USER": "jang",
+        "PASSWORD": "123"
+    },
+    "mysql": {
+        "ENGINE": "django.db.backends.mysql",
+        "NAME": "",
+        "USER": "root",
+        "PASSWORD": "123"
+    }
+}

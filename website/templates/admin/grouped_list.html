@@ -1,0 +1,72 @@
+{% extends 'admin/change_list.html' %}
+{% block content_title %}
+    <h1> Grouped </h1>
+{% endblock %}
+{% block change_form %}
+    {% if cl.formset %}
+        <div>{{ cl.formset.management_form }}</div>
+    {% endif %}
+    {% block result_list %}
+        {% block pagination %}
+            {{block.super}}
+        {% endblock %}
+        {% include 'sorter/sorter.html' %}
+        <div class="results">
+            <style>
+                .actions_container{
+                    display:flex;
+                }
+                #changelist table thead th{
+                    padding: 5px 2px 2px 10px;
+                }
+                .actions_container>*:not(:last-child){
+                    margin-right:10px;
+                }
+                .actions_container form{
+                    padding: 5px;
+                    border:1px solid #ccc;
+                    border-radius: 4px;
+                    cursor: pointer;
+                }
+            </style>
+            <form id="group_list_search_form" action="">
+                <div style="display:flex; justify-content:space-between">
+                    {% for col in columns %}
+                        <div><input placeholder="{{ col.name }}" value="{{ filters|get_item:col.name }}" name="{{ col.name }}"></div>
+                    {% endfor %}
+                    <div>
+                        <div class="text"><button type="submit" >Submit</button></div>
+                    </div>
+                </div>
+            </form>
+            <table id="result_list">
+                <thead>
+                    <tr>
+                        {% for col in columns %}
+                            <th>{{ col.name }}</th>
+                        {% endfor %}
+                        <th>
+                            <div class="text"><a>Actions</a></div>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for row in raw_list %}
+                    <tr>
+                        {{ row.html | safe }}
+                        <td>
+                            {% block list_actions %}
+                            {% endblock %}
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+            <script src="/static/website/js/grouped_list.js?v=2">
+            </script>
+            {% csrf_token %}
+            {% block list_includes %}
+            {% endblock %}
+        </div>
+    {% endblock %}
+{% endblock %}

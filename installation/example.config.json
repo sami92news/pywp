@@ -1,0 +1,28 @@
+{
+    "active_db": "mysql",
+    "env": "production",
+    "local" : 0,
+    "postgresql": {
+        "ENGINE": "django.db.backends.postgresql",
+        "NAME": "news92",
+        "USER": "odoo",
+        "PASSWORD": "123"
+    },
+    "mysql": {
+        "ENGINE": "django.db.backends.mysql",
+        "NAME": "urdu92",
+        "USER": "root",
+        "PASSWORD": "123"
+    },
+    "site_name": "urdu",
+    "post_image": {
+        "urdu": {
+            "BASE_URL": "http://urdu.92newshd.tv/",
+            "BASE_DIR": "aur.92newshd.tv/"
+        },
+        "eng": {
+            "BASE_URL": "http://92newshd.tv/",
+            "BASE_DIR": "92news.plus/public_html/92newshd"
+        }
+    }
+}
